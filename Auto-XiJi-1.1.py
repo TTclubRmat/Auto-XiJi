@@ -11,7 +11,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 url = 'https://xx.xx.xx.xx/'
-a_time = '1'  # 设置进入网站至能够输入用户名密码的等待时间（秒），考虑webvpn而设计，建议设置1秒以上
+a_time = 1  # 设置进入网站至能够输入用户名密码的等待时间（秒），考虑webvpn而设计，建议设置1秒以上
 username = 'xxxx'  # 用户名
 password = 'xxxx'  # 密码
 className = 'C程序设计'  # 课程名称
