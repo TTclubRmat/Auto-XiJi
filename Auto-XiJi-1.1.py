@@ -1,6 +1,7 @@
 # 希冀网课自动脚本 Ver 1.1
 # By TIANT
 # 2024.10.14
+# Last updated: 2024.12.28
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -9,10 +10,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-username = 'xxxxxxxxxxx'  # 用户名
-password = 'xxxxxxxxxxx'  # 密码
+url = 'https://xx.xx.xx.xx/'
+a_time = '1'  # 设置进入网站至能够输入用户名密码的等待时间（秒），考虑webvpn而设计，建议设置1秒以上
+username = 'xxxx'  # 用户名
+password = 'xxxx'  # 密码
 className = 'C程序设计'  # 课程名称
-videoName = 'C程序设计'  #子课程名称
+videoName = 'C程序设计'  # 子课程名称
 
 # Edge WebDriver路径（下载地址：https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/?form=MA13LH#installation）
 # 如果该WebDriver不符合您的Edge浏览器版本请自行下载替换
@@ -64,10 +67,10 @@ def select_next_option(driver):
 
 try:
     # 打开浏览器并登录到指定地址
-    driver.get('http://10.5.151.196')
+    driver.get(url)
 
     # 等待页面加载
-    time.sleep(1)  # 页面加载较慢，增加等待时间
+    time.sleep(a_time)
 
     # 搜索并填写学号
     stid_input = WebDriverWait(driver, 10).until(
